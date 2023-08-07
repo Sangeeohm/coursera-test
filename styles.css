@@ -1,76 +1,60 @@
-*{
-    box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
-h1{
-    margin: 5%;
-    text-align: center;
-    font-weight: bold;
-}
-section {
-
-    padding: 1%;
-    width: 100%;
-}
-p {
-    position: relative;
-    clear: right;
+.menu-box {
+  background-color: #f0f0f0; /* Gray background color */
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: calc(33.33% - 40px);
+  margin-bottom: 20px;
+  position: relative;
 }
 
-div {
-
-    background-color: gray;
-    border: 2px solid black;
-    width: 100%;
+.menu-item {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #aaa;
+  padding: 5px 10px;
 }
 
-.chick_head{
-    float: right;
-    width: 30%;
-    padding: 2%;
-    margin: 0px;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    text-align: center;
-    font-size: 125%;
-    font-weight: bold;
-    background-color: rosybrown;
-}
-.beef_head{
-    float: right;
-    width: 30%;
-    padding: 2%;
-    margin: 0px;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    text-align: center;
-    font-size: 125%;
-    font-weight: bold;
-    color: wheat;
-    background-color: rgb(204, 52, 52);
-}
-.sushi_head{
-    float: right;
-    width: 30%;
-    padding: 2%;
-    margin: 0px;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    text-align: center;
-    font-size: 125%;
-    font-weight: bold;
-    background-color: rgb(252, 252, 142);
-}
-.content {
-
-    padding: 3%;
-    background-color: gray;
-    color: black;
-    margin: 0px;
-    overflow: auto;
+.menu-item.chicken {
+  background-color: #FFD700; /* Yellow */
 }
 
+.menu-item.sushi {
+  background-color: #00FF00; /* Green */
+}
+
+.menu-item.beef {
+  background-color: #FF4500; /* Orange/Red */
+}
+
+/* Media Query for screens with width >= 1200px */
+@media (min-width: 1200px) {
+  .menu-container {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+
+  .menu-box {
+    width: calc(33.33% - 40px);
+    margin-right: 20px;
+    margin-bottom: 0; /* Remove margin-bottom for adjacent boxes */
+  }
+
+  .menu-box:last-child {
+    margin-right: 0; /* Remove margin from the last box to avoid excess spacing */
+  }
+
+  .menu-item {
+    top: 10px;
+    right: 10px;
+  }
+}
 
 
 @media  (min-width:992px) {
@@ -82,22 +66,3 @@ div {
     
 }
 
-@media ( min-width:768px) and (max-width:991px){
-
-    .col-md-2{
-        float: left;
-        width: 50%;
-
-    }
-    .col-md-1{
-        float: left;
-        width: 100%;
-
-    }
-}
-@media (max-width: 767px) {
-    .col-sm-1 {
-        float: left;
-        width: 100%;
-    }
-}
