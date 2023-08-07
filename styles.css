@@ -5,7 +5,8 @@
 }
 
 .box {
-  border: 1px solid #ccc;
+  background color: grey;
+  border: 1px solid black;
   padding: 20px;
   width: calc(33.33% - 40px);
   position: relative;
