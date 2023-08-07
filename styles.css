@@ -20,6 +20,10 @@
   right: 10px;
 }
 
+h1{
+  text-align:center;
+}
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
   .container {
