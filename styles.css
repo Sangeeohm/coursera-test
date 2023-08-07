@@ -12,20 +12,30 @@
 }
 
 .item{
-  background-color: #f0f0f0;
-  border: 1px solid #aaa;
-  padding: 10px;
-  position: absolute;
+ position: absolute;
   top: 10px;
   right: 10px;
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+}
+.item.chicken {
+  background-color: #FFD700; /* Yellow */
+}
+
+.item.sushi {
+  background-color: #00FF00; /* Green */
+}
+
+.item.beef {
+  background-color: #FF4500; /* Orange/Red */
 }
 
 h1{
   text-align: center;
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
+/* Media Query for screens with width <= 1200px */
+@media (min-width: 1200px) {
   .container {
     flex-direction: column;
   }
@@ -33,5 +43,17 @@ h1{
   .box {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+/* Media Query for screens with width <= 997px */
+@media (min-width: 960px) and (max-width: 1199px) {
+  .box {
+    padding: 10px;
+  }
+
+  .item {
+    top: 5px;
+    right: 5px;
   }
 }
