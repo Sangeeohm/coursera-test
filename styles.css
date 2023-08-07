@@ -1,32 +1,32 @@
-.container {
+.menu-container {
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 
-.box {
+.menu-box {
   background-color:gray;
   border: 1px solid black;
   padding: 20px;
   position: relative;
 }
 
-.item{
+.menu-item{
  position: absolute;
   top: 10px;
   right: 10px;
   border: 1px solid black;
   padding: 5px 10px;
 }
-.item.chicken {
+.menu-item.chicken {
   background-color: yellow;
 }
 
-.item.sushi {
+.menu-item.sushi {
   background-color: green;
 }
 
-.item.beef {
+.menu-item.beef {
   background-color: orange;
 }
 
@@ -34,118 +34,60 @@ h1{
   text-align: center;
 }
 
-/* Media Query for screens with width <= 1200px */
-@media (min-width: 1200px) {
-  .container {
-    flex-direction: column;
-  }
 
-  .box {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
 /******** Large devices only ************/
-@media (min-width: 1200px){
-	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
-				border: 1px black;
-	}
-	.container {
+@media (min-width: 1200px) {
+  .menu-container {
     flex-wrap: nowrap; /* Prevent wrapping on larger screens */
   }
 
-  .box {
-    width: calc(33.33% - 40px); /* Adjust the width for larger screens */
-    margin-right: 20px; /* Add spacing between adjacent boxes */
+  .menu-box {
+    width: calc(33.33% - 40px);
+    margin-right: 20px;
+    margin-bottom: 0; /* Remove margin-bottom for adjacent boxes */
   }
 
-  .box:last-child {
+  .menu-box:last-child {
     margin-right: 0; /* Remove margin from the last box to avoid excess spacing */
   }
 
-  .item {
-    padding: 5px 10px; /* Adjust padding for larger screens */
-    font-size: 16px; /* Adjust font size for larger screens */
+  .menu-item {
+    top: 10px;
+    right: 10px;
   }
 }
-	.col-lg-1{
-		width: 8.33%;
-	}
-	.col-lg-2{
-		width: 16.66%;
-	}
-	.col-lg-3{
-		width: 25%;
-	}
-	.col-lg-4{
-		width: 33%
-	}
-	.col-lg-5{
-		width: 41.66%;
-	}
-	.col-lg-6{
-		width: 50%;
-	}
-	.col-lg-7{
-		width: 58.33%;
-	}
-	.col-lg-8{
-		width: 66.66%;
-	}
-	.col-lg-9{
-		width: 74.99%;
-	}
-	.col-lg-10{
-		width: 83.33%;
-	}
-	.col-lg-11{
-		width: 91.66%;
-	}
-	.col-lg-12{
-		width: 100%;
-	}
-}
 /********** Medium devices only ****************/
-@media (min-width: 960px) and (max-width: 1199px){
-	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{
-		float: left;
-		border: 1px solid black;
-	}
-	.col-md-1{
-		width: 8.33%;
-	}
-	.col-md-2{
-		width: 16.66%;
-	}
-	.col-md-3{
-		width: 25%;
-	}
-	.col-md-4{
-		width: 33%
-	}
-	.col-md-5{
-		width: 41.66%;
-	}
-	.col-md-6{
-		width: 50%;
-	}
-	.col-md-7{
-		width: 58.33%;
-	}
-	.col-md-8{
-		width: 66.66%;
-	}
-	.col-md-9{
-		width: 74.99%;
-	}
-	.col-md-10{
-		width: 83.33%;
-	}
-	.col-md-11{
-		width: 91.66%;
-	}
-	.col-md-12{
-		width: 100%;
-	}
+@media (min-width: 956px) and (max-width: 1199px) {
+  .menu-container {
+    flex-direction: row; /* Revert to horizontal layout */
+    justify-content: space-between; /* Distribute boxes evenly */
+    padding: 20px; /* Adjust padding for medium screens */
+  }
+
+  .menu-box {
+    width: calc(33.33% - 20px); /* Adjust the width for medium screens */
+    margin-bottom: 20px; /* Maintain spacing between boxes */
+  }
+
+  .menu-item {
+    position: relative;
+    top: auto;
+    right: auto;
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    background-color: #f0f0f0; /* Apply gray background color */
+  }
+
+  .menu-item.chicken {
+    background-color: #FFD700; /* Yellow */
+  }
+
+  .menu-item.sushi {
+    background-color: #00FF00; /* Green */
+  }
+
+  .menu-item.beef {
+    background-color: #FF4500; /* Orange/Red */
+  }
 }
 
