@@ -5,7 +5,7 @@
 }
 
 .box {
-  baqckground-color:gray;
+  background-color:gray;
   border: 1px solid black;
   padding: 20px;
   position: relative;
@@ -50,6 +50,24 @@ h1{
 	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
 				border: 1px black;
 	}
+	.container {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+
+  .box {
+    width: calc(33.33% - 40px); /* Adjust the width for larger screens */
+    margin-right: 20px; /* Add spacing between adjacent boxes */
+  }
+
+  .box:last-child {
+    margin-right: 0; /* Remove margin from the last box to avoid excess spacing */
+  }
+
+  .item {
+    padding: 5px 10px; /* Adjust padding for larger screens */
+    font-size: 16px; /* Adjust font size for larger screens */
+  }
+}
 	.col-lg-1{
 		width: 8.33%;
 	}
